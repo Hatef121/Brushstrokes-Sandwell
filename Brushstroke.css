@@ -1,0 +1,442 @@
+
+/*css template same as for each page of Brushstroke website starts from here*/
+* {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+  :root{
+    --Home:#e9ff5b;
+    --Home-Fade:#ddff00;
+    --Body-color:#f5f6f7;
+    --Activity-Orange:#dd7425;
+      --Activity-Fade-Orange:#e98e49;
+    --Support-Crimson:#4f193c;
+    --Support-Fade-Crimson:#7e6575;
+    --Legal-Supports-Green:#17451b;
+    --Legal-Supports-Fade-Green:#417d46;
+    --About-Us-Cyan:#0d6579;
+    --About-Us_Fade-Cyan:#2b94ac;
+    --Box-Shadow:0 0 20px 0 #f5f6f7;
+  }
+  .header-container-greet{
+    
+   color: var(--Body-color);
+   font-size: 3.75vw;
+   text-align: center;
+   margin-right:5%;
+   margin-left: 5%;
+   overflow: visible;
+   top: 10vh;
+   top: 80px;
+    position: relative;
+    display: block;
+  }
+  
+  body {
+    background: var(--Body-color);
+    font-family: Helvetica;
+   margin: 0;
+    position: absolute;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+  
+  }
+  /* header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    
+  } */
+  .header-container{
+    top: 60px;
+    width: 100%;
+    height:50vh;
+  }
+
+  /*Here is this section the element will differe depending on the page*/
+  
+  .header-container.Supports,footer.Supports{
+    background:linear-gradient(to top right,var(--Support-Crimson),var(--Support-Fade-Crimson) );
+
+  }
+  .header-container.LegalSupport,footer.LegalSupport{
+    background:linear-gradient(to top right,var(--Legal-Supports-Green),var(--Legal-Supports-Fade-Green) );
+
+  }
+  .header-container.Home,footer.Home{
+    background:linear-gradient(to top right,var(--Home-Fade),var(--About-Us-Cyan) );
+
+  }
+  /*Exclusive to home page*/
+  .Home>.header-container-greet{
+    /* background:linear-gradient(to top right,var(--Home-Fade),var(--Home-Fade) ); */
+    color: var(--Body-color);
+  }
+  /*Exclusive to home page*/
+  
+  .header-container.Activity,footer.Activity{
+    background:linear-gradient(to top right,var(--Activity-Orange),var(--Activity-Fade-Orange) );
+
+  }
+  .header-container.AboutUs,footer.AboutUs{
+    background:linear-gradient(to top right,var(--About-Us-Cyan),var(--About-Us_Fade-Cyan) );
+
+  }
+  header.Supports{
+    background-color: var(--Support-Fade-Crimson);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+  }
+  header.LegalSupport{
+    background-color: var(--Legal-Supports-Fade-Green);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+  }
+  header.Home{
+    background:linear-gradient(to top right,var(--Home),var(--About-Us_Fade-Cyan),var(--About-Us-Cyan) );
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+  }
+  header.Activity{
+    background-color: var(--Activity-Orange);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+  }
+  header.AboutUs{
+    background-color: var(--About-Us-Cyan);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+  }
+  .devider.supportDevider{
+    border: 8px solid var(--Support-Crimson);
+
+  }
+  .devider.LegalSupportDevider{
+    border: 8px solid var(--Legal-Supports-Green);
+
+  }
+  .devider.HomeDevider{
+    border: 8px solid var(--Home);
+
+  }
+  .devider.ActivityDevider{
+    border: 8px solid var(--Activity-Orange);
+
+  }
+  .devider.AboutUsDevider{
+    border: 8px solid var(--About-Us_Fade-Cyan);
+
+  }
+  h2.SupportHeading{
+    color: var(--Support-Fade-Crimson);
+  }
+  h2.LegalSupportHeading{
+    color:var(--Legal-Supports-Green);
+  }
+  h2.HomeHeading{
+    color:  var(--About-Us-Cyan);
+
+  }
+  h2.ActivityHeading{
+    color:  var(--Activity-Orange);
+
+  }
+  h2.AboutUsHeading{
+    color:  var(--About-Us-Cyane);
+
+  }
+  .devider{
+     width: 80%;
+     margin: auto;
+     margin-top: 2rem;
+    }
+
+  #logo {
+    width: max(70px, 14vw);
+    aspect-ratio: 20 / 4;
+    padding: 0.4rem;
+    box-shadow:var(--Box-Shadow) ;
+    margin-left: 5px;
+    
+  }
+  
+  nav {
+    width: 100%;
+    height: 50px;
+  }
+  
+  nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+  }
+  
+  nav > ul > li {
+    color: #dfdfe2;
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+    display: block;
+    
+    transition: color 300ms ease-in-out;
+    transition: background-color 300ms;
+  }
+  footer> nav > ul > li{
+    transition: all 300ms ease-in-out;
+
+  }
+  footer>nav > ul > li:hover {
+    background-color: #dfdfe2;
+    color: #1b1b32;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: var(--Box-Shadow);
+  }
+  
+  .contact-us{
+    
+    font-size: large;
+  }
+  
+  li > a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .container{
+    top: 50vh;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  footer{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 20px;
+  }
+  #map{
+    width: max(300,50vw);
+    height: auto;
+    aspect-ratio: 10/10;
+  
+  }
+  footer>nav{
+    height: 300px;
+    min-width: auto;
+  
+  }
+  footer>nav>ul{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  /*css Brushstrokes template ends here*/
+  h2{
+    text-align: center;
+    padding-top: 15px;
+    font-size: 3.25vw;
+  }
+  figure{
+    background-color: var(--Body-color);
+    padding: 10px;;
+    border-radius: 10px;
+      /* filter: blur(10px); */
+      box-shadow: var(--Box-Shadow);
+  
+  }
+  figcaption{
+    margin: 15px o 5px 0;
+    font-size: 1.3rem;
+    padding-top: 1rem;
+  
+  }
+  main{
+    font-size: 10px;
+    text-align: center;
+    line-height: 1.5;
+  }
+  img{
+    width:auto;
+    height: auto;
+    display: block;
+    max-width: 100%;
+    text-align: center;
+    border-radius: 1.0rem;
+    box-shadow: var(--Box-Shadow);
+    margin: auto;
+  }
+  section{
+    background-color: #dfdfe2;
+    padding-top: 1.0rem;
+  
+  
+  }
+  .Activity-description{
+    font-size: 2em;
+    margin: 1rem;
+    padding-bottom: 1rem;
+  }
+  #Hadly-Stadium-Location{
+    display: block;
+    margin: auto;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    padding-top: 20px;
+  }
+  .nav{
+    transition: color 300ms ease-in-out;
+  }
+  .Home:hover{
+    color: var(--Home);
+  }
+  
+  .Activities:hover{
+    color: var(--Activity-Fade-Orange);
+  }
+  .Supports:hover{
+    color: var(--Support-Crimson);
+  }
+  .LegalSupport:hover{
+    color: var(--Legal-Supports-Green);
+  }
+  /* nav > ul > .LegalSupports:hover {
+    background-color: #dfdfe2;
+    color: var(--Support-Crimson);
+    cursor: pointer;
+    border-radius: 10px;
+  } */
+  .About-Us:hover{
+    color: var(--About-Us-Cyan);
+  }
+  /*Specific to each page
+  */
+  .Inside-Figure_Link{
+    text-decoration: none;
+    color: #afafaf;
+    transition: color 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+
+
+  }
+  .Inside-Figure_Link:hover{
+    box-shadow: var(--Box-Shadow);
+    color: var(--Body-color);
+    background-color: #dfdfe2;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .Outside-Figure_Link{
+text-decoration: none;
+color: var(--Body-color);
+transition: all 300ms ease-in-out;
+  }
+  .Outside-Figure_Link:hover{
+background-color: var(--Body-color);
+box-shadow: var(--Box-Shadow);
+color: #afafaf;
+border-radius: 10px;
+padding: 10px;
+  }
+
+/*exclusive to Home page*/
+  .header-nav>a{
+    text-decoration: none;
+    color: var(--Home-Blue);
+    transition: all 300ms ease-in-out;
+ }
+.Legal-Supports>a:hover{
+  color: var(--Legal-Supports-Green);
+ }
+.Activity > a:hover{
+color:var(--Activity-Orange);
+      }
+      .Support>a:hover{
+    color: var(--Support-Crimson);
+      }
+      .AboutUs>a:hover{
+        color: var(--About-Us-Cyan);
+      }
+
+
+
+
+/* Calender */
+
+.Calender{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+.CalenderTable{
+  width: auto;
+  padding: 20px;
+  margin: auto;
+}
+.CalenderDescription{
+  flex: content;
+  margin: auto;
+  padding: 10px;
+  max-height: 500px;
+  max-width: 500px;
+  float: left;
+  display: contents;
+  flex-direction: column;
+  font-size: 1.3rem;
+  display: flex;
+}
+
